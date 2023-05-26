@@ -6,7 +6,7 @@ let loginSchema = mongoose.Schema({  // writing certai Rules for the Schema.call
     emailid: {       // writinh how many and what type of feilds we want to set in the record. feild names and inside that their own rules. 
         type: String,
         required: [true, "Email id is required"],
-        unique:true
+        unique:[true,"Email  id must be unique"]
     },
 
     password: {
@@ -19,6 +19,10 @@ typeofuser: {
         required: [true, "type of user must be required"],
 
     },
+    cus:{
+        type:Number,
+        required:false
+    }
 
 })
 
